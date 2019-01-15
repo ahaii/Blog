@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block blog-nav %}
+<div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          {% for nav in categorys %}
+              {% if nav.name == 'Home' %}
+                  <a class="blog-nav-item active" href="#">{{ nav.name }}</a>
+              {% else %}
+                  <a class="blog-nav-item" href="#">{{ nav.name }}</a>
+              {% endif %}
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+{% endblock %}
