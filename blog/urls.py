@@ -19,6 +19,6 @@ from blog import views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('^$', views.index),
-    url('index/', views.index),
+    url(r'^$', views.index),
+    url(r'^category/([0-9]{1,2})/$', views.category_detail, name='category_detail'),
 ]

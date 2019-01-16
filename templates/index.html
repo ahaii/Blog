@@ -4,14 +4,23 @@
 <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          {% for nav in categorys %}
-              {% if nav.name == 'Home' %}
-                  <a class="blog-nav-item active" href="#">{{ nav.name }}</a>
+          {% for category in categorys %}
+              {% if category.name == 'Home' %}
+                  <a class="blog-nav-item active" onclick="category_detail({{ category.id }})" href="">{{ category.name }}</a>
               {% else %}
-                  <a class="blog-nav-item" href="#">{{ nav.name }}</a>
+                  <a class="blog-nav-item" onclick="category_detail({{ category.id }})" href="#">{{ category.name }}</a>
               {% endif %}
           {% endfor %}
         </nav>
       </div>
     </div>
+{% endblock %}
+
+{% block blog-post %}
+{% for article in articles %}
+    <div class="blog-post">
+        <h2 class="blog-post-title">{{ article.title }}</h2>
+        <p>{{ article.body }}</p>
+    </div>
+{% endfor %}
 {% endblock %}
