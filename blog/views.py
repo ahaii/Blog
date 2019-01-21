@@ -12,6 +12,6 @@ def index(request):
 
 def category_detail(request, cid):
     articles_obj = Article.objects.filter(category_id=cid)
-    serializer_data = serializers.serialize("json", articles_obj)[1:-1]
-    print(serializer_data[0]['fields'])
+    serializer_data = serializers.serialize("json", articles_obj)
+    print(serializer_data)
     return HttpResponse(serializer_data)
