@@ -26,9 +26,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'iszxq$$-&ng9@3k)lvfkyh45zl=pu3=gp7lxlzlfc&o&@=^zd^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['www.ahaii.com']
 
 
 # Application definition
@@ -84,7 +85,7 @@ DATABASES = {
         'NAME': 'blog',
         'USER': 'root',
         'HOST': 'localhost',
-        'PORT': 3306,
+        'PORT': 3390,
         'PASSWORD': '0711',
     }
 }
@@ -128,6 +129,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
+# ]
