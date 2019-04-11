@@ -29,7 +29,7 @@ SECRET_KEY = 'iszxq$$-&ng9@3k)lvfkyh45zl=pu3=gp7lxlzlfc&o&@=^zd^'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['www.ahaii.com']
+ALLOWED_HOSTS = ['www.ahaii.com','127.0.0.1']
 
 
 # Application definition
@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',
         'USER': 'root',
-        'HOST': 'localhost',
+        'HOST': '47.75.111.10',
         'PORT': 3390,
         'PASSWORD': '0711',
     }

@@ -30,6 +30,9 @@ h6, .h6 {
   }
 }
 
+.container {
+  background-color: #eee;
+}
 
 /*
  * Masthead for nav
