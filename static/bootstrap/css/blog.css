@@ -142,9 +142,11 @@ h6, .h6 {
  */
 
 .blog-post {
-  padding: 20px 15px 20px 20px;
-  margin-bottom: 20px;
+  padding: 20px 10px 30px 20px;
+  margin-bottom: 15px;
   background-color: #fff;
+  position: relative;
+  clear: both;
 }
 
 .blog-post-img {
@@ -157,13 +159,14 @@ h6, .h6 {
   cursor: pointer;
 }
 
+
 .blog-post-title {
   margin-bottom: 12px;
   color: #00a67c;
   font-size: 22px;
 }
 
-.blog-post-body{
+.blog-post-text {
   text-align: left;
 
 }

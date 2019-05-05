@@ -29,7 +29,7 @@ SECRET_KEY = 'iszxq$$-&ng9@3k)lvfkyh45zl=pu3=gp7lxlzlfc&o&@=^zd^'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['www.ahaii.com','127.0.0.1']
+ALLOWED_HOSTS = ['www.ahaii.com', '127.0.0.1']
 
 
 # Application definition
@@ -66,6 +66,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -127,10 +128,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 STATIC_URL = '/static/'
 
+# static file dir for collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+
+# static file dir for dev
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static')
 # ]

@@ -2,6 +2,7 @@ from gevent import monkey
 monkey.patch_all()
 import multiprocessing
 debug = True
+daemon = True
 loglevel = 'debug'
 bind = '127.0.0.1:8080'
 pidfile = '/tmp/gunicorn.pid'
