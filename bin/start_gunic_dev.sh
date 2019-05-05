@@ -13,6 +13,11 @@ case $1 in
     ;;
     "restart")
     gunicorn -c /Users/ahaii/Python/blog/gunicorn_dev_conf.py blog.wsgi:application --reload
+    if [ $? = 0 ];then
+        echo "Gunicorn reload OK!"
+    else
+        echo "Gunicorn reload false!"
+    fi
     ;;
     "stop")
     kill $(cat /tmp/gunicorn.pid)

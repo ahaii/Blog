@@ -1,20 +1,5 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block blog-nav %}
-<div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          {% for category in categories %}
-              {% if category.name == 'Home' %}
-                  <a class="blog-nav-item active" onclick="category_detail({{ category.id }})" href="">{{ category.name }}</a>
-              {% else %}
-                  <a class="blog-nav-item" onclick="category_detail({{ category.id }})" href="">{{ category.name }}</a>
-              {% endif %}
-          {% endfor %}
-        </nav>
-      </div>
-    </div>
-{% endblock %}
 
 {% block blog-post %}
 {% for article in articles %}
