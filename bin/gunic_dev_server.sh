@@ -16,12 +16,18 @@ case $1 in
     if [ $? = 0 ];then
         echo "Gunicorn reload OK!"
     else
-        echo "Gunicorn reload false!"
+        echo "Gunicorn reload False!"
     fi
     ;;
     "stop")
     kill $(cat /tmp/gunicorn.pid)
+    if [ $? = 0 ];then
+        sleep 1
+        echo "Gunicorn stop OK!"
+    else
+        echo "Guncicorn stop False! No PID file found!"
+    fi
     ;;
     *)
-    echo "use start|stop|restart" 
+    echo "use [start|stop|restart]" 
 esac

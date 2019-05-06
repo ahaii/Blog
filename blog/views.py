@@ -11,8 +11,8 @@ def index(request):
 
 
 def article_detail(request, article_id):
-    article_obj = Article.objects.filter(id=article_id)
-    return render(request, 'article_detail.html', {'article_obj': article_obj})
+    article_obj = Article.objects.get(id=article_id)
+    return render(request, 'article_detail.html', {'article': article_obj})
 
 
 def category_detail(request, category_id):
