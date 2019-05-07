@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.core import serializers
 from blog.models import Category, Article
+import markdown
 
 
 def index(request):
@@ -12,6 +13,11 @@ def index(request):
 
 def article_detail(request, article_id):
     article_obj = Article.objects.get(id=article_id)
+    article_obj.body = markdown.markdown(article_obj.body.replace('\n\n', '\n'),
+                                         extensions=['markdown.extensions.extra',
+                                                     'markdown.extensions.codehilite',
+                                                     'markdown.extensions.toc',
+                                                     ])
     return render(request, 'article_detail.html', {'article': article_obj})
 
 
