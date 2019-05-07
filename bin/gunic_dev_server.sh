@@ -11,7 +11,7 @@ case $1 in
         echo "Gunicorn start false!"
     fi
     ;;
-    "restart")
+    "reload")
     gunicorn -c /Users/ahaii/Python/blog/gunicorn_dev_conf.py blog.wsgi:application --reload
     if [ $? = 0 ];then
         echo "Gunicorn reload OK!"
@@ -29,5 +29,5 @@ case $1 in
     fi
     ;;
     *)
-    echo "use [start|stop|restart]" 
+    echo "use [start|stop|reload]" 
 esac

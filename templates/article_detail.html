@@ -3,23 +3,33 @@
 {% block blog-post %}
     <div class="blog-post">
         <div class="blog-header">
-            <h2>{{ article.title }}</h2>
+            <h1 class="blog-post-title">{{ article.title }}</h1>
             <div class="blog-post-meta">
-                <span id="分类">
-                    <i id="图标">
-
-                    </i>
-                    <a id="分类名字">
-
-                    </a>
+                <span>
+                    <i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
+                    <a href="{% url 'category_detail' article.category_id %}">{{ article.category }}</a>
                 </span>
-                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                <span>{{ article.modify_time }}</span>
-                <span class="glyphicon glyphicon-user"></span>
+                <span>
+                    <i class="glyphicon glyphicon-time" aria-hidden="true"></i>
+                    <time>{{ article.modify_time }}</time>
+                </span>
+                <span>
+                    <i class="glyphicon glyphicon-user"></i>
+                    <i>ahaii.</i>
+                </span>
             </div>
-        <p class="blog-post-meta">{{ article.brief }}</p>
         </div>
         <hr>
-        <p>{{ article.body }}</p>
+        <div class="blog-post-body">
+            <table>
+               <tbody>
+                   <tr>
+                       <td>{{ article.brief }}</td>
+                   </tr>
+               </tbody>
+            </table>
+            <p>{{ article.body }}</p>
+        </div>
+
     </div>
 {% endblock %}
