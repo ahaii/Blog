@@ -13,7 +13,7 @@ def index(request):
 
 def article_detail(request, article_id):
     article_obj = Article.objects.get(id=article_id)
-    article_obj.body = markdown.markdown(article_obj.body.replace('\n\n', '\n'),
+    article_obj.body = markdown.markdown(article_obj.body,
                                          extensions=['markdown.extensions.extra',
                                                      'markdown.extensions.codehilite',
                                                      'markdown.extensions.toc',
