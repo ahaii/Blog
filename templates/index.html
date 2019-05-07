@@ -4,9 +4,14 @@
 {% block blog-post %}
 {% for article in articles %}
     <div class="blog-post">
-        <h2 class="blog-post-title">
-            <a href="{% url 'article_detail' article.id %}">{{ article.title }}</a>
-        </h2>
+        <header>
+            <a class="label" href="{% url 'category_detail' article.category_id %}">{{ article.category }}
+                <i class="label-arrow"></i>
+            </a>
+            <h2 class="blog-post-title">
+                <a href="{% url 'article_detail' article.id %}">{{ article.title }}</a>
+            </h2>
+        </header>
         <div class="blog-post-body">
             <div class="blog-post-img">
                 <img width="200" height="123" src="http://www.ahaii.com/static/img/TESLA.png">

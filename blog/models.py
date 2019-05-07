@@ -15,7 +15,7 @@ class Article(models.Model):
                             verbose_name='文章图片')
     body = models.TextField(verbose_name='文章内容')
     create_time = models.DateTimeField(verbose_name='创建时间')
-    modify_time = models.DateTimeField(verbose_name='修改时间', auto_now_add=True)
+    modify_time = models.DateTimeField(verbose_name='修改时间', auto_now=True)
     category = models.ForeignKey('Category', verbose_name='分类')
 
     def __str__(self):
