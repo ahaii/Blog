@@ -132,6 +132,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# 别名，前端引用时的地址
 STATIC_URL = '/static/'
 
 # static file dir for collectstatic

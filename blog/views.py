@@ -23,6 +23,7 @@ def article_detail(request, article_id):
 
 def category_detail(request, category_id):
     articles_obj = Article.objects.filter(category_id=category_id)
+    # ajax 方式
     serializer_data = serializers.serialize("json", articles_obj)
-    print(serializer_data)
     return HttpResponse(serializer_data)
+    # return render(request, 'articles.html', {'articles': articles_obj})
