@@ -1,5 +1,4 @@
 
-
 $(".blog-nav a").click(function () {
     $(".blog-nav a").removeClass('active');
     $(this).addClass('active');
@@ -36,7 +35,8 @@ function category_detail(id) {
                                                         '<i class="label-arrow"></i>\n' +
                                                     '</a>\n' +
                                                     '<h2 class="blog-post-title">\n' +
-                                                        '<a href="article/'+ article_id +'">' + article_title + '</a>\n' +
+                                                        // '<a href="article/'+ article_id +'">' + article_title + '</a>\n' +
+                                                        '<a onclick="article_detail(article_id)">' + article_title + '</a>\n' +
                                                     '</h2>\n' +
                                                 '</header>\n' +
                                                 '<div class="blog-post-body">\n' +
@@ -48,7 +48,8 @@ function category_detail(id) {
                                                     '</div>\n' +
                                                 '</div>\n' +
                                             '</div>');
-            })
+            });
         }
-    })
+    });
+    // history.pushState(null,null,'/category/'+id);
 }

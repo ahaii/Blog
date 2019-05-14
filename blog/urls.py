@@ -22,5 +22,4 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^article/([0-9]{1,5})$', views.article_detail, name='article_detail'),
     url(r'^category/([0-9]{1,2})$', views.category_detail, name='category_detail'),
-    url(r'^category/(\w+)$', views.category_detail, name='category_detail'),
 ]

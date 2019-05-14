@@ -11,6 +11,7 @@ class Article(models.Model):
 
     title = models.CharField(max_length=100, verbose_name='文章标题')
     brief = models.CharField(max_length=200, blank=True, null=True, verbose_name='文章简介')
+    author = models.CharField(max_length=10,verbose_name='作者',default='ahaii')
     img = models.ImageField(upload_to='img/%Y/%m/%d', default=Default_IMG,
                             verbose_name='文章图片')
     body = models.TextField(verbose_name='文章内容')
