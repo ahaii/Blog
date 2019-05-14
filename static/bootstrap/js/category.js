@@ -28,7 +28,7 @@ function category_detail(id) {
                                                         '<i class="label-arrow"></i>\n' +
                                                     '</a>\n' +
                                                     '<h2 class="blog-post-title">\n' +
-                                                        '<a href="article/"' + '"' + article_id.toString() + '"' +'>' + article_title + '</a>\n' +
+                                                        '<a href="article/'+ article_id +'">' + article_title + '</a>\n' +
                                                     '</h2>\n' +
                                                 '</header>\n' +
                                                 '<div class="blog-post-body">\n' +
@@ -39,7 +39,7 @@ function category_detail(id) {
                                                         '<p style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:5; overflow: hidden;">' + article_body + '</p>\n' +
                                                     '</div>\n' +
                                                 '</div>\n' +
-                                           '</div>');
+                                            '</div>');
             })
         }
     })
