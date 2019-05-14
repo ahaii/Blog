@@ -5,6 +5,13 @@ $(".blog-nav a").click(function () {
     $(this).addClass('active');
 });
 
+var category_dic = {
+    '2': '系统架构',
+    '3': 'Python',
+    '4': '算法',
+    '5': '机器学习',
+    '6': '阅读',
+};
 
 function category_detail(id) {
     $.ajax({
@@ -17,14 +24,15 @@ function category_detail(id) {
             $(".blog-post").remove();
             $.each(msg, function (i) {
                 // alert(JSON.stringify(msg[i]['fields']['title']));
-                var category = msg[i]['fields']['category'];
+                var category_id = msg[i]['fields']['category'];
+                var category_name = category_dic[category_id];
                 var article_id = msg[i]['pk'];
                 var article_title = msg[i]['fields']['title'];
                 var article_body = msg[i]['fields']['body'];
                 // $("#article-list").prepend("<div class='blog-post'><h2 class='blog-post-title'>" + title + "</h2>" + "<p>" + body + "</p>" + "</div>");
                 $("#article-list").prepend('<div class="blog-post">\n' +
                                                 '<header>\n' +
-                                                    '<a class="label">' + category +
+                                                    '<a class="label">' + category_name +
                                                         '<i class="label-arrow"></i>\n' +
                                                     '</a>\n' +
                                                     '<h2 class="blog-post-title">\n' +
