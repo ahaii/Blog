@@ -19,7 +19,7 @@ function article_detail(id) {
                                                 '<div class="blog-post-meta">\n' +
                                                     '<span>\n' +
                                                         '<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>\n' +
-                                                        '<a href="{% url \'category_detail\' article.category_id %}">' + category_dic[article_category_id] + '</a>\n' +
+                                                        '<a onclick="category_detail(' + article_category_id +')">' + category_dic[article_category_id] + '</a>' +
                                                     '</span>\n' +
                                                     '<span>\n' +
                                                         '<i class="glyphicon glyphicon-time" aria-hidden="true"></i>\n' +

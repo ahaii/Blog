@@ -201,6 +201,10 @@ h6, .h6 {
   font-size: 22px;
 }
 
+.blog-post-meta a {
+  cursor: pointer;
+}
+
 .blog-post-text {
   text-align: left;
 
