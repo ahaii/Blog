@@ -28,14 +28,12 @@ function category_detail(id) {
                 var article_id = msg[i]['pk'];
                 var article_title = msg[i]['fields']['title'];
                 var article_body = msg[i]['fields']['body'];
-                // $("#article-list").prepend("<div class='blog-post'><h2 class='blog-post-title'>" + title + "</h2>" + "<p>" + body + "</p>" + "</div>");
                 $("#article-list").prepend('<div class="blog-post">\n' +
                                                 '<header>\n' +
                                                     '<a class="label">' + category_name +
                                                         '<i class="label-arrow"></i>\n' +
                                                     '</a>\n' +
                                                     '<h2 class="blog-post-title">\n' +
-                                                        // '<a href="article/'+ article_id +'">' + article_title + '</a>\n' +
                                                         '<a onclick="article_detail('+ article_id +')">' + article_title + '</a>\n' +
                                                     '</h2>\n' +
                                                 '</header>\n' +
