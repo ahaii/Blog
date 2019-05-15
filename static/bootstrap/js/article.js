@@ -1,13 +1,4 @@
 
-
-var category_dic = {
-    '2': '系统架构',
-    '3': 'Python',
-    '4': '算法',
-    '5': '机器学习',
-    '6': '阅读',
-};
-
 function article_detail(id) {
     $.ajax({
         type: 'GET',

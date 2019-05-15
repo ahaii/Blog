@@ -4,7 +4,7 @@ $(".blog-nav a").click(function () {
     $(this).addClass('active');
 });
 
-var category_dic = {
+const category_dic = {
     '2': '系统架构',
     '3': 'Python',
     '4': '算法',
