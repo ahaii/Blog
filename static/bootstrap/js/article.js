@@ -12,6 +12,13 @@ function article_detail(id) {
             var article_author = msg[0]['fields']['author'];
             var article_brief = msg[0]['fields']['brief'];
             var article_body = msg[0]['fields']['body'];
+            // 导航栏选中
+            $('.blog-nav a').each(function () {
+                if ($(this).getElementById() == article_category_id){
+
+                }
+            });
+
             $(".blog-post").remove();
             $("#article-list").prepend('<div class="blog-post">\n' +
                                            '<div class="blog-header">\n' +
