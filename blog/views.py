@@ -21,7 +21,6 @@ def article_detail(request, article_id):
     #                                                  ])
     # return render(request, 'article_detail.html', {'article': article_obj})
     serializers_data = serializers.serialize("json", article_obj)
-    print(serializers_data)
     return HttpResponse(serializers_data)
 
 
