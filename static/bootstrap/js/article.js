@@ -12,11 +12,15 @@ function article_detail(id) {
             var article_author = msg[0]['fields']['author'];
             var article_brief = msg[0]['fields']['brief'];
             var article_body = msg[0]['fields']['body'];
-            // 导航栏选中
-            $('.blog-nav a').each(function () {
-                if ($(this).getElementById() == article_category_id){
 
-                }
+            // 导航栏选中
+            // 循环获取导航栏a标签id(base.html中定义),与当前文章所属category_id匹配
+
+            $('.blog-nav a').each(function () {
+                if ($(this).attr('id') === article_category_id.toString()) {
+                    $(".blog-nav a").removeClass('active');
+                    $(this).addClass('active');
+                    }
             });
 
             $(".blog-post").remove();
