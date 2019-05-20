@@ -3,7 +3,7 @@
 
 case $1 in 
     "start") 
-    gunicorn -c /Users/ahaii/Python/blog/gunicorn_dev_conf.py blog.wsgi:application
+    gunicorn -c ./gunicorn_dev_conf.py blog.wsgi:application
     if [[ $? = 0 ]];then
         sleep 3
         PID=$(cat /tmp/gunicorn.pid)
@@ -13,7 +13,7 @@ case $1 in
     fi
     ;;
     "reload")
-    gunicorn -c /Users/ahaii/Python/blog/gunicorn_dev_conf.py blog.wsgi:application --reload
+    gunicorn -c ./gunicorn_dev_conf.py blog.wsgi:application --reload
     if [[ $? = 0 ]];then
         echo "Gunicorn reload OK!"
     else
